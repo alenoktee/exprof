@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exprof</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="Логотип Exprof">
+            </div>
+            <button class="burger" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="menu-container">
+                <nav class="menu">
+                    <a href="#" class="active">Главная</a>
+                    <a href="#">Контакты</a>
+                    <a href="#">ПВХ профили</a>
+                    <a href="#">Производителям окон</a>
+                    <a href="#">Ламинация профилей</a>
+                    <a href="#">Новости</a>
+                    <div class="tel">
+                        <span>
+                            <a href="tel:+375293512000"><i class="icon fas fa-phone-alt"></i> +375 29 351 20 00</a>
+                        </span>
+                    </div>
+                </nav>
+            </div>
+            <div class="burger-overlay">
+                <button class="close-burger" aria-label="Закрыть меню">&times;</button>
+                <nav class="mobile-menu">
+                    <a href="#" class="active">Главная</a>
+                    <a href="#">Контакты</a>
+                    <a href="#">ПВХ профили</a>
+                    <a href="#">Производителям окон</a>
+                    <a href="#">Ламинация профилей</a>
+                    <a href="#">Новости</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="img/slider1.jpg" alt="Image 1">
+                <div class="overlay"></div>
+                <div class="content container mx-auto px-4">
+                    <h1 class="font-medium content-title">Профессионализм<br>и качество на каждом этапе</h2>
+                        <p class="content-description">Окна от ведущего производителя с 20-летним опытом.</p>
+                        <a href="#" class="button content-button">Узнать больше</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img/slider2.jpg" alt="Image 2">
+                <div class="overlay"></div>
+                <div class="content container mx-auto px-4">
+                    <h1 class="font-medium content-title">Уют и комфорт<br>для вашего дома</h2>
+                        <p class="content-description">Окна EXPROF – тепло и безопасность для всей семьи,<br>даже в
+                            самые
+                            суровые зимы.</p>
+                        <a href="#" class="button content-button">Перейти в каталог <b>→</b></a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img/slider3.jpg" alt="Image 3">
+                <div class="overlay"></div>
+                <div class="content container mx-auto px-4">
+                    <h1 class="font-medium content-title">Прозрачность,<br>близкая к природе</h2>
+                        <p class="content-description">Идеальные окна для уютного вида в любую погоду.</p>
+                        <a href="#" class="button content-button">Связаться с нами</a>
+                </div>
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <!-- Почему мы? -->
+    <section class="features py-12">
+        <div class="container mx-auto px-4">
+            <button class="accent-title text-center mb-6">ПОЧЕМУ МЫ?</button>
+            <h2 class="title font-medium text-black">EXPROF — надежный поставщик и партнер<br>в развитии оконного
+                бизнеса</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="feature-item text-center">
+                    <img src="img/icon1.svg" alt="Иконка" class="mx-auto mb-2">
+                    <p>Системы «дышащих» окон для здорового микроклимата</p>
+                </div>
+                <div class="feature-item text-center">
+                    <img src="img/icon2.svg" alt="Иконка" class="mx-auto mb-2">
+                    <p>Широкий выбор энергосберегающих оконных профилей</p>
+                </div>
+                <div class="feature-item text-center">
+                    <img src="img/icon3.svg" alt="Иконка" class="mx-auto mb-2">
+                    <p>Готовые решения для любых светопрозрачных конструкций</p>
+                </div>
+                <div class="feature-item text-center">
+                    <img src="img/icon4.svg" alt="Иконка" class="mx-auto mb-2">
+                    <p>Подтвержденная долговечность пвх-профилей 60 лет</p>
+                </div>
+                <div class="feature-item text-center">
+                    <img src="img/icon5.svg" alt="Иконка" class="mx-auto mb-2">
+                    <p>Особая рецептура пластика для любых климатических условий</p>
+                </div>
+                <div class="feature-item text-center">
+                    <img src="img/icon6.svg" alt="Иконка" class="mx-auto mb-2">
+                    <p>Автоматизированное производство по новейшим технологиям</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Новая секция -->
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <h2 class="hero-title container mx-auto px-4 text-center">EXPROF: Окна, проверенные временем</h2>
+            <p class="hero-description container mx-auto px-4">Частное предприятие "ВУЛАР ДИЗАЙН" — надежный поставщик и
+                партнер в развитии оконного бизнеса. Мы стремимся к стабильному росту и развитию. Мы всегда
+                ориентированы на наших клиентов.
+                <br>Конкурентными преимуществами нашей компании является инновационное мышление, стремление к качеству,
+                ориентация на потребителя и высокая степень ответственности. Страсть к совершенству во всех областях –
+                наша ежедневная цель. Профессиональные, увлеченные своим делом сотрудники, а также близкие партнерские
+                отношения с клиентами – это основа нашего успеха.
+            </p>
+        </div>
+    </section>
+
+    <section class="catalog py-12">
+        <div class="container mx-auto px-4">
+            <button class="accent-title mb-6">НАШИ ПРОФИЛИ</button>
+            <h2 class="text-center font-medium mb-6 text-black">Каталог профилей</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="catalog-item relative text-center">
+                    <img src="img/profile1.png" alt="S670 Experta" class="catalog-img">
+                    <div class="gradient-overlay"></div>
+                    <div class="catalog-content">
+                        <h3 class="text-lg font-medium text-white">Профили S670 Experta</h3>
+                        <a href="#" class="catalog-link">Узнать больше</a>
+                    </div>
+                </div>
+                <div class="catalog-item relative text-center">
+                    <img src="img/profile2.png" alt="S671 Arctica" class="catalog-img">
+                    <div class="gradient-overlay"></div>
+                    <div class="catalog-content">
+                        <h3 class="text-lg font-medium text-white">Профили S671 Arctica</h3>
+                        <a href="#" class="catalog-link">Узнать больше</a>
+                    </div>
+                </div>
+                <div class="catalog-item relative text-center">
+                    <img src="img/profile3.png" alt="S680 Polarika" class="catalog-img">
+                    <div class="gradient-overlay"></div>
+                    <div class="catalog-content">
+                        <h3 class="text-lg font-medium text-white">Профили S680 Polarika</h3>
+                        <a href="#" class="catalog-link">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-container text-center">
+                <a href="#" class="catalog-button">Перейти в каталог →</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Ламинация -->
+    <section class="lamination py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center font-bold mb-6">Образцы ламинационных пленок</h2>
+            <div class="lamination-slider">
+                <div class="lamination-grid flex">
+                    <!-- Дубликаты для бесконечного слайдера -->
+                    <div class="lamination-item text-center">
+                        <img src="img/laminate6.png" alt="Пленка 6" class="mx-auto mb-4">
+                        <p>Темный орех</p>
+                    </div>
+                    <div class="lamination-item text-center">
+                        <img src="img/laminate1.png" alt="Пленка 1" class="mx-auto mb-4">
+                        <p>Натуральный дуб</p>
+                    </div>
+                    <div class="lamination-item text-center">
+                        <img src="img/laminate2.png" alt="Пленка 2" class="mx-auto mb-4">
+                        <p>Темный дуб</p>
+                    </div>
+                    <div class="lamination-item text-center">
+                        <img src="img/laminate3.png" alt="Пленка 3" class="mx-auto mb-4">
+                        <p>Орех</p>
+                    </div>
+                    <div class="lamination-item text-center">
+                        <img src="img/laminate4.png" alt="Пленка 4" class="mx-auto mb-4">
+                        <p>Белый дуб</p>
+                    </div>
+                    <div class="lamination-item text-center">
+                        <img src="img/laminate5.png" alt="Пленка 5" class="mx-auto mb-4">
+                        <p>Светлый дуб</p>
+                    </div>
+                    <!-- Дубликаты для бесконечного слайдера -->
+                    <div class="lamination-item text-center">
+                        <img src="img/laminate1.png" alt="Пленка 1" class="mx-auto mb-4">
+                        <p>Натуральный дуб</p>
+                    </div>
+                    <div class="lamination-item text-center">
+                        <img src="img/laminate2.png" alt="Пленка 2" class="mx-auto mb-4">
+                        <p>Темный дуб</p>
+                    </div>
+                    <div class="lamination-item text-center">
+                        <img src="img/laminate3.png" alt="Пленка 3" class="mx-auto mb-4">
+                        <p>Орех</p>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation-buttons text-center mt-4">
+                <button class="nav-button left-button mr-1"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-button right-button ml-1"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section">
+        <div class="news-overlay">
+            <div class="news-container">
+                <div class="news-header">
+                    <button class="accent-title mb-6">ПОСЛЕДНИЕ НОВОСТИ</button>
+                    <h2>Познакомьтесь с нами поближе</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-content-container container mx-auto px-4">
+            <div class="news-grid">
+                <!-- Карточка 1 -->
+                <div class="news-card">
+                    <img src="img/news1.jpg" alt="Новость 1" class="news-image">
+                    <div class="news-content">
+                        <span class="news-date">5 НОЯБРЯ 2024</span>
+                        <h3 class="news-title">Подоконники: Какие бывают и как выбрать?</h3>
+                        <p class="news-text">
+                            Lorem ipsum dolor sit amet consectetur. Sit vitae aliquam aliquam in suscipit id vivamus.
+                        </p>
+                        <a href="#" class="news-link">Читать статью →</a>
+                    </div>
+                </div>
+
+                <!-- Карточка 2 -->
+                <div class="news-card">
+                    <img src="img/news2.jpg" alt="Новость 2" class="news-image">
+                    <div class="news-content">
+                        <span class="news-date">5 НОЯБРЯ 2024</span>
+                        <h3 class="news-title">Подоконники: Какие бывают и как выбрать?</h3>
+                        <p class="news-text">
+                            Lorem ipsum dolor sit amet consectetur. Sit vitae aliquam aliquam in suscipit id vivamus.
+                        </p>
+                        <a href="#" class="news-link">Читать статью →</a>
+                    </div>
+                </div>
+
+                <!-- Карточка 3 -->
+                <div class="news-card">
+                    <img src="img/news3.jpg" alt="Новость 3" class="news-image">
+                    <div class="news-content">
+                        <span class="news-date">5 НОЯБРЯ 2024</span>
+                        <h3 class="news-title">Подоконники: Какие бывают и как выбрать?</h3>
+                        <p class="news-text">
+                            Lorem ipsum dolor sit amet consectetur. Sit vitae aliquam aliquam in suscipit id vivamus.
+                        </p>
+                        <a href="#" class="news-link">Читать статью →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Футер -->
+    <footer class="text-white text-center py-4">
+        <p>&copy; 2024 Exprof. Все права защищены.</p>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script src="js/header.js"></script>
+</body>
+
+</html>

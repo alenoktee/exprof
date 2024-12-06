@@ -1,0 +1,242 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~ ОБЩИЕ СТИЛИ ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+:root {
+    --main-color: #FF7D44;
+    --dark-main-color: #e46833;
+    --secondary-color: #307797;
+    --text-color: #242424;
+    --background-color: #fff;
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+button {
+    border-radius: 40%;
+}
+
+.accent-title {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ ШАПКА ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    height: 80px;
+}
+
+
+.logo {
+    flex: 0 0 auto;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.logo img {
+    max-height: 50px;
+    display: block;
+}
+
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    background-color: #307797;
+    height: 80px;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    margin: 0;
+}
+
+.menu {
+    margin: 0;
+    display: flex;
+    gap: 22px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    max-width: 100%;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.menu a {
+    position: relative;
+    text-decoration: none;
+}
+
+.menu a.active::after,
+.menu a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+.tel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.tel .icon {
+    color: #ff5722;
+    font-size: 18px;
+    transform: scaleX(-1);
+}
+
+.tel span {
+    color: #fff;
+}
+
+
+
+
+
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    margin-right: 17px;
+}
+
+.burger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.close-burger {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.burger-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 39, 50, 0.9);
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 100px 20px;
+}
+
+.burger-overlay.active {
+    display: flex;
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mobile-menu a {
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.burger.hidden {
+    display: none;
+}
+
+@media (max-width: 1025px) {
+    .menu-container {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
