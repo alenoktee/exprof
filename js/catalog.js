@@ -51,23 +51,25 @@ function showProfile(profile) {
         const img = document.createElement("img");
         img.src = subprofile.img;
         img.alt = subprofile.title;
-        img.className = `w-20 h-20 border-2 rounded ${
-            index === 0 ? "border-blue-500" : "border-gray-200"
-        } cursor-pointer`;
+        img.className = `w-32 h-32 border-2 rounded cursor-pointer ${
+            index === 0 ? "border-[var(--main-color)]" : "border-gray-200"
+        }`; // Размер увеличен до 32x32
         img.addEventListener("click", () => {
-            // Смена обводки у всех изображений
+            // Удаляем обводку у всех картинок
             images.querySelectorAll("img").forEach(img => {
-                img.classList.remove("border-blue-500");
+                img.classList.remove("border-[var(--main-color)]");
                 img.classList.add("border-gray-200");
             });
-            img.classList.add("border-blue-500");
+            // Добавляем обводку к активной картинке
+            img.classList.add("border-[var(--main-color)]");
             img.classList.remove("border-gray-200");
-
-            // Обновляем таблицу
+    
+            // Обновляем таблицу и заголовок
             updateTable(profile, index);
         });
         images.appendChild(img);
     });
+    
 
     // Вывод характеристик первого подпрофиля
     updateTable(profile, 0);
@@ -76,12 +78,17 @@ function showProfile(profile) {
 }
 
 
+
 function updateTable(profile, subIndex) {
     const template = document.getElementById("profileTableTemplate");
     const tableClone = template.cloneNode(true);
     const specs = profile.subprofiles[subIndex].specs;
 
-    tableClone.id = ""; // Убираем ID у клона, чтобы не дублировать
+    // Добавляем заголовок подпрофиля
+    const subprofileTitle = document.getElementById("subprofileTitle");
+    subprofileTitle.textContent = profile.subprofiles[subIndex].title;
+
+    tableClone.id = ""; // Убираем ID у клона
     tableClone.classList.remove("hidden");
 
     // Заполняем таблицу
@@ -90,7 +97,7 @@ function updateTable(profile, subIndex) {
         cell.textContent = specs[index];
     });
 
-    // Обновляем таблицу на странице
+    // Обновляем таблицу
     const container = document.getElementById("profileTable");
     container.innerHTML = ""; // Очищаем старую таблицу
     container.appendChild(tableClone);
