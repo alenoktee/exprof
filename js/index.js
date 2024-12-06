@@ -44,15 +44,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const visibleItems = 4; // Количество видимых элементов
     const totalItems = items.length;
 
-    const firstClone = [...items].slice(0, visibleItems).map(item => item.cloneNode(true));
-    const lastClone = [...items].slice(-visibleItems).map(item => item.cloneNode(true));
-    
-    firstClone.forEach(clone => slider.appendChild(clone));
-    lastClone.forEach(clone => slider.insertBefore(clone, slider.firstChild));
+    // Количество клонов
+    const clonesToAdd = visibleItems;
 
-    let currentIndex = visibleItems; // Начальная позиция (после добавленных клонов)
+    // Клонирование
+    const firstClone = [...items].slice(0, clonesToAdd).map(item => item.cloneNode(true));
+    const lastClone = [...items].slice(-clonesToAdd).map(item => item.cloneNode(true));
+
+    // Правильное добавление клонов
+    lastClone.reverse().forEach(clone => slider.insertBefore(clone, slider.firstChild));
+    firstClone.forEach(clone => slider.appendChild(clone));
+
+    let currentIndex = clonesToAdd; // Начальная позиция (после добавленных клонов)
     let offset = -itemWidth * currentIndex;
 
+    // Инициализация начального положения
     slider.style.transform = `translateX(${offset}px)`;
 
     const updateSlider = (direction) => {
@@ -62,10 +68,10 @@ document.addEventListener("DOMContentLoaded", () => {
             slider.style.transition = "transform 0.5s ease";
             slider.style.transform = `translateX(${offset}px)`;
 
-            if (currentIndex >= totalItems + visibleItems) {
+            if (currentIndex >= totalItems + clonesToAdd) {
                 setTimeout(() => {
                     slider.style.transition = "none";
-                    currentIndex = visibleItems;
+                    currentIndex = clonesToAdd;
                     offset = -itemWidth * currentIndex;
                     slider.style.transform = `translateX(${offset}px)`;
                 }, 500);
@@ -76,10 +82,10 @@ document.addEventListener("DOMContentLoaded", () => {
             slider.style.transition = "transform 0.5s ease";
             slider.style.transform = `translateX(${offset}px)`;
 
-            if (currentIndex < visibleItems) {
+            if (currentIndex < clonesToAdd) {
                 setTimeout(() => {
                     slider.style.transition = "none";
-                    currentIndex = totalItems + visibleItems - 1;
+                    currentIndex = totalItems + clonesToAdd - 1;
                     offset = -itemWidth * currentIndex;
                     slider.style.transform = `translateX(${offset}px)`;
                 }, 500);
@@ -87,6 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+    // События для кнопок
     nextButton.addEventListener("click", () => updateSlider("next"));
     prevButton.addEventListener("click", () => updateSlider("prev"));
 });

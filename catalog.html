@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог профилей</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/ыендуы.css">
+
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow p-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <img src="logo.png" alt="Логотип Exprof" class="h-10">
+        </div>
+    </header>
+
+    <main class="container mx-auto py-6">
+        <div id="profiles" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+
+        <div id="profileDetails" class="hidden bg-white rounded-lg shadow p-6 mt-8">
+            <h1 id="profileTitle" class="text-2xl font-bold mb-4"></h1>
+            <p id="profileDescription" class="mb-4"></p>
+            <div id="subprofileImages" class="flex gap-4 mb-4"></div>
+        
+            <!-- Шаблон таблицы -->
+            <table id="profileTableTemplate" class="table-auto w-full border-collapse border border-gray-200 hidden">
+                <tbody>
+                    <tr class="bg-gray-100"><th class="border p-2">Монтажная глубина</th><td class="border p-2" data-spec="0"></td></tr>
+                    <tr><th class="border p-2">Системная ширина</th><td class="border p-2" data-spec="1"></td></tr>
+                    <tr class="bg-gray-100"><th class="border p-2">Класс толщины</th><td class="border p-2" data-spec="2"></td></tr>
+                    <tr><th class="border p-2">Класс условий</th><td class="border p-2" data-spec="3"></td></tr>
+                    <tr class="bg-gray-100"><th class="border p-2">Сопротивление теплопередачи</th><td class="border p-2" data-spec="4"></td></tr>
+                    <tr><th class="border p-2">Глубина стеклопакета</th><td class="border p-2" data-spec="5"></td></tr>
+                    <tr class="bg-gray-100"><th class="border p-2">Макс. вес</th><td class="border p-2" data-spec="6"></td></tr>
+                    <tr><th class="border p-2">Мин. глубина</th><td class="border p-2" data-spec="7"></td></tr>
+                    <tr class="bg-gray-100"><th class="border p-2">Коэффициент сопротивления</th><td class="border p-2" data-spec="8"></td></tr>
+                    <tr><th class="border p-2">Количество стекол</th><td class="border p-2" data-spec="9"></td></tr>
+                    <tr class="bg-gray-100"><th class="border p-2">Прозрачность</th><td class="border p-2" data-spec="10"></td></tr>
+                    <tr><th class="border p-2">Срок службы</th><td class="border p-2" data-spec="11"></td></tr>
+                </tbody>
+            </table>
+        
+            <!-- Контейнер для отображаемой таблицы -->
+            <div id="profileTable"></div>
+        </div>        
+    </main>
+
+    <script src="js/catalog.js"></script>
+</body>
+
+</html>

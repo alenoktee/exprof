@@ -1,0 +1,117 @@
+:root {
+    --main-color: #FF7D44;
+    --text-color: #242424;
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+header {
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.profile-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.profile-card h2 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.profile-details {
+    margin-top: 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details.hidden {
+    display: none;
+}
+
+.subprofile-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.subprofile-images img {
+    width: 100px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.subprofile-images img.active {
+    border-color: var(--main-color);
+    transform: scale(1.1);
+}
+
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.details-table th,
+.details-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.details-table th {
+    background: #f9f9f9;
+}
+
+.details-table td {
+    text-align: center;
+}
